@@ -29,6 +29,8 @@ import {
 
 import { Logo } from "@/components/icons";
 
+import {Avatar, AvatarGroup, AvatarIcon} from "@nextui-org/react";
+
 export const Navbar = () => {
 	const searchInput = (
 		<Input
@@ -81,7 +83,7 @@ export const Navbar = () => {
 			<NavbarContent
 				className="hidden sm:flex basis-1/5 sm:basis-full"
 				justify="end"
-			>
+				>
 				<NavbarItem className="hidden sm:flex gap-2">
 					<Link isExternal href={siteConfig.links.twitter} aria-label="Twitter">
 						<TwitterIcon className="text-default-500" />
@@ -97,17 +99,20 @@ export const Navbar = () => {
 				<NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem>
 				<NavbarItem className="hidden md:flex">
 					<Button
-            isExternal
+            			isExternal
 						as={Link}
 						className="text-sm font-normal text-default-600 bg-default-100"
 						href={siteConfig.links.sponsor}
 						startContent={<HeartFilledIcon className="text-danger" />}
 						variant="flat"
 					>
-						Sponsor
+						Star proyect 
 					</Button>
 				</NavbarItem>
 			</NavbarContent>
+			<div className="flex gap-3 items-center">
+      <Avatar src="https://th.bing.com/th/id/OIG.Ugs39tSz0Z_UJr94j4zL?w=1024&h=1024&rs=1&pid=ImgDetMain" />
+    </div>
 
 			<NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
 				<Link isExternal href={siteConfig.links.github} aria-label="Github">
